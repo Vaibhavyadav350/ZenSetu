@@ -1,6 +1,7 @@
 package com.vaibhav.zensetu.entity;
 
 import lombok.Data;
+import lombok.NonNull;
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -16,6 +17,7 @@ public class CustomerEntity {
     @Id
     private ObjectId customerID;
     private LocalDateTime date;
+    @NonNull
     private String customerName;
     private String customerAddress;
     private String customerPhone;
